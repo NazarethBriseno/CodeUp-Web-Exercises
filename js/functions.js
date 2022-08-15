@@ -9,7 +9,7 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(name) {
-    return "Hello " + name + "!";
+    return "Hello, " + name + "!";
 }
 /**
  * TODO:
@@ -41,8 +41,14 @@ function isTwo(num) {
         return false;
     }
 }
-
-console.log(isTwo(random));
+// Teacher's Work
+// console.log(isTwo(random));
+//
+// function isTwo(number){
+//     return number ===2;
+//
+// }
+// console.log(isTwo(random));
 /**
  * TODO:
  * Create a function called 'isTwo' that takes a number as a parameter.
@@ -79,7 +85,9 @@ function calculateTip(tipPercentage, billTotal) {
     return tipPercentage * billTotal;
 }
 
-alert("You should tip $" + calculateTip(tipPercentage,billTotal));
+let tip = calculateTip(tipPercentage/100, billTotal)
+alert("You should tip $" + tip);
+
 
 
 /**
