@@ -70,7 +70,7 @@
 //     i++;
 // }
 
-for(i = 1; i < 100; i++;){
-    console.log(i);
-}
-console.log("Outside the loop: " + i);
+// for(i = 1; i < 100; i++;){
+//     console.log(i);
+// }
+// console.log("Outside the loop: " + i);

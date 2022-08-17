@@ -18,13 +18,18 @@
 //     }
 // }
 
-
+//Repeat the number * itself
 //99999999
+//
+// for(let i = 1; i <=9; i++){
+//     console.log(i.toString().repeat(i));
+// }
 
-for(let i = 1; i <=9; i++){
-    console.log(i.toString() + i.toString());
-}
-
+//Decrease the number from 100 to 5 by deleting 5
+// for (let number = 100; number >= 5; number = number - 5){
+//     console.log(number);
+// }
+//
 
 
 
