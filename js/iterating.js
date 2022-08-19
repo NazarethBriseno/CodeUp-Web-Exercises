@@ -26,11 +26,11 @@
      // * Write some code that uses a for loop to log every item in the names
      // * array.
      // */
-    function outputArray(names){
+
         for(let i = 0; i < names.length; i++){
         console.log(names[i]);
     }
-    }
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
@@ -38,6 +38,8 @@
     names.forEach(function(element){
         console.log(element)
     });
+    //Teachers Code
+// names.forEach(name => console.log(name));
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -52,13 +54,13 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-function first(firstName){
-    console.log(firstName[0]);
+function first(array){
+    console.log(array[0]);
     }
-function second(firstName){
-    console.log(firstName[1]);
+function second(array){
+    console.log(array[1]);
 }
-function last(firstName){
-    console.log(firstName[names.length - 1]);
+function last(array){
+    console.log(array[names.length - 1]);
 }
 

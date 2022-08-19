@@ -2,7 +2,7 @@
 // declaring an array literal:
 // Each item in an array is called an element
 //
-// let groceryList = ['bread', 'eggs', 'butter,', 'milk']
+let groceryList = ['bread', 'eggs', 'butter,', 'milk']
 //
 // for(let i = 0; i < groceryList.length; i++){
 //     if (i === groceryList.length - 1){
@@ -37,6 +37,37 @@ let prices = [32.99, 21.99, 6.99, 4.99, 12.99, 8.98, 5.99];
 //    console.log("Item number " + (index + 1) + " costs " + price);
 // });
 //since the function is anonymous, we can use arrow syntax
-prices.forEach((price => {
-   console.log(price)
-});
+// prices.forEach((price => {
+//    console.log(price)
+// })
+
+// Pushes items to the end of the array
+groceryList.push("potatoes");
+//Pop will delete the last item on the array
+groceryList.pop();
+//Unshift will add whatever added to the beginning
+groceryList.unshift("sliced cheddar");
+//Shift will remove anything that was at the beginning
+groceryList.shift();
+//This will show the index location of butter
+let indexOfButter = groceryList.indexOf("butter");
+
+//You can reassign an index by putting the array name with the index location and putting a new value
+groceryList[indexOfButter] = "peanut butter";
+
+let bread = groceryList[0];
+groceryList[0] = "avacadoes";
+//This will split the array, you can push and pop in these areas
+let firstHalfOfGroceryList = groceryList.slice(0, 2);
+let secondHalfOfGroceryList = groceryList.slice(2);
+
+firstHalfOfGroceryList.push("butter");
+// This will combine the seperated slices back together into the formed array
+groceryList = firstHalfOfGroceryList.concat(secondHalfOfGroceryList);
+
+//Reverse orders of array
+groceryList.reverse();
+let string = "Hello";
+//Sort puts everything in alphabetical order
+groceryList.sort();
+console.log(groceryList);
