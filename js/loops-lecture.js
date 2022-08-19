@@ -54,7 +54,7 @@
 // while (count >= 0){   // check the value of the loop control variable in a conditional test
 //     console.log(count);
 //     count = count - 1; // Change the value of the loop control variable
-}
+//}
    // Starting Value||Check Value||Change the Value
 // for(let count = 100; count >= 0; count = count - 1){
 //     console.log(count);
