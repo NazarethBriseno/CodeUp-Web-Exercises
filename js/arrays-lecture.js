@@ -71,3 +71,16 @@ let string = "Hello";
 //Sort puts everything in alphabetical order
 groceryList.sort();
 console.log(groceryList);
+
+let quote= "All the world's a play";
+let quoteArray = quote.split(' ');
+
+
+
+//The split method will split everything inside a string in between what you put inside the paranthesis and turn it
+// into an array
+let planetsArray = planetsString.split("|");
+console.log(planetsArray);
+//You could turn the array back into a string with .join and space them with what you put into the paranthesis
+let planetsString1 = planetsArray.join("<br>")
+console.log(planetsString1);
