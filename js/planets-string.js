@@ -30,6 +30,6 @@
         for(let i = 0; i < commandArray.length; i++){
          commandArray[i] = (commandArray[i].split('').reverse().join(''))
         }
-        let command = commandArray.join(' ') + "!";
+        let command = commandArray.join(' ');
        return command.charAt(0).toUpperCase() + command.slice(1);
     }
