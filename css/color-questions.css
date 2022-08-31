@@ -1,0 +1,27 @@
+.aquestion {
+    height: 100px;
+    width: 100px;;
+    display: inline-block;
+    box-shadow: 10px 10px 5px black;
+}
+#ten {
+    background: rgba(255, 0, 0, 0.1);
+}
+
+#thirty{
+    background: rgba(255, 0, 0, 0.3);
+}
+#fifty {
+    background: rgba(255, 0, 0, 0.5);
+}
+#eighty {
+    background: rgba(255, 0, 0, 0.8);
+}
+#hundred {
+    background: red;
+}
+
+.pAQ {
+    text-align: center;
+    padding-top: 40px;
+}

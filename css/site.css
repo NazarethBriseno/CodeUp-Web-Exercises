@@ -1,6 +1,8 @@
 body {
     background-color: black;
     color: white;
+    margin-left: 30vw; /*  VW means view width  */
+    margin-right: 30vw;
 }
 h1 {
     font-family: sans-serif;
@@ -9,3 +11,23 @@ h1 {
 h2 {
     border-bottom: 1px solid antiquewhite;
 }
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+li.italic{
+    font-size: 1.1rem;
+}
+
+ul li {
+    color: lightblue;
+}
+/* This is referencing the children of the unordered or ordered lists. */
+ol li {
+    color: palegreen;
+}
+
