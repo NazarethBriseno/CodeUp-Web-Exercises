@@ -1,3 +1,47 @@
 .fancy-header {
     color: purple;
+    text-align: center;
+}
+
+h2 {
+    color: #0e7fef;
+    text-decoration: underline black;
+}
+
+body {
+    background-image: url("/img/cool-background.png");
+    font-family: 'Bubblegum Sans', cursive;
+    font
+
+}
+
+ul {
+    list-style-type: circle;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+td:hover {background-color: coral;}
+
+
+
+td {
+    padding-right: 40px;
+}
+
+a:link {
+    color: green;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover{
+    background: antiquewhite;
+}
+
+a:active{
+    background: darkblue;
 }
