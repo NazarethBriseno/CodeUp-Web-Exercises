@@ -1,0 +1,49 @@
+body {
+    background-color: #deded8;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+header, article, aside, footer {
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+}
+
+main {
+    display: flex;
+}
+
+article {
+    flex: 75%
+}
+
+aside {
+    background-color: white;
+    flex: 25%;
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    padding: 10px 0;
+}
+
+nav a {
+    flex: auto;
+    background-color: aliceblue;
+    text-align: center;
+    margin: 0 5px;
+    padding: 5px 0;
+    text-decoration: none;
+}
+
+nav a:hover {
+    outline: 1px solid red;
+    color: red;
+    text-decoration: underline;
+}
