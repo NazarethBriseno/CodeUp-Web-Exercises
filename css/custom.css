@@ -1,0 +1,14 @@
+#main-heading{
+    background-image: url("pizza.png");
+    background-size: cover;
+    height: 346px;
+}
+
+#main-heading h1 {
+    margin-top: 6rem;
+}
+
+button {
+
+}
+
