@@ -24,3 +24,8 @@
 
 // let answer = confirm("How are you?");
 // alert(answer);
+
+let accessTheDOM = document.getElementById("dc");
+let showMe = accessTheDOM.innerHTML;
+alert(showMe);
+
