@@ -29,7 +29,10 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
-
+<button id="bt1">Click Me</button>
+<button id="bt2">Click me Second</button>
+<button id="bt3">Click me Third</button>
+<button id="bt4">Click me Fourth</button>
 <script>
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
@@ -56,6 +59,30 @@
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
     subParagraphs[0].innerText = "Mission Accomplished!"
+
+        let btn1 = document.getElementById("bt1");
+        let btn2 = document.getElementById("bt2");
+        let btn3 = document.getElementById("bt3");
+        let btn4 = document.getElementById("bt4");
+
+    function alert1(){
+        alert("Wow, YOU CLICKED ME!");
+    }
+    function alert2(){
+        alert("Second");
+    }
+
+    function alert3(){
+        alert("Third is the worst");
+    }
+
+    function alert4(){
+        alert("Never thought i'd get clicked, thanks man.....thanks.")
+    }
+        btn1.addEventListener('click', alert1);
+        btn2.addEventListener('click', alert2);
+        btn3.addEventListener('click', alert3);
+        btn4.addEventListener('click', alert4);
 </script>
 </body>
 </html>
