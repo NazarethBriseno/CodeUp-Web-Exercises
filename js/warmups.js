@@ -122,12 +122,101 @@
 // beeramid(1500, 2); // should === 12
 // beeramid(5000, 3); // should === 16
 
-function beeramid(bonus, price){
-    let totalCost = 0;
-    let levels = 0;
-    while(totalCost < bonus){
-        totalCost += levels * levels * price;
-        levels++;
+// function beeramid(bonus, price){
+//     let totalCost = 0;
+//     let levels = 0;
+//     while(totalCost < bonus){
+//         totalCost += levels * levels * price;
+//         levels++;
+//     }
+//     return levels - 2;
+// }
+
+// const attendance = {
+//     miami: 32789,
+//     buffalo: 45678,
+//     portland: 24567
+// }
+//
+// //Write a function that returns the total attendance across all teams
+// function totalAttendance(attendanceObject){
+//     let attendanceArray = Object.values(attendanceObject);
+//     let total = 0;
+//     for(let i = 0; i < attendanceArray.length; i++){
+//         total += attendanceArray[i];
+//     }
+//     return total;
+// }
+// //Given the attendance object, write a function that returns the average attendance
+// function averageAttendance(attendanceObject){
+//     let total = 0;
+//     for (const prop in attendance){
+//         total += attendance[prop];
+//     }
+//     return total/Object.keys(attendance).length
+}
+//Given the attendance object, write a function that returns an object with totalAttendance properties set to the
+// correct values
+
+// function createObject(attendanceObject){
+//     let total = 0;
+//     for (const prop in attendance){
+//         total += attendance[prop];
+//     }
+//     return {
+//         totalAttendance: total,
+//         averageAttendance: total/Object.keys(attendance).length
+//     }
+// }
+
+/**
+ * Convert Address to Object
+ * Write a function named convertAddressToObject that accepts a string that contains a street number (as a string) and street name separated by a space characters, and returns an object with properties streetNumber and streetName.
+ *
+ * Examples
+ *
+ * >> convertAddressToObject('8646 Sunny Oaks') ➞ {streetNumber: '8646', streetName: 'Sunny Oaks'}
+ * >> convertAddressToObject('5408 Villa Nueva') ➞ {streetNumber: '5408', streetName: 'Villa Nueva'}
+ **/
+let address = "325 Elm Street";
+
+function convertAddressToObject(addressString){
+    return {
+        streetNumber: addressString.substring(0, indexOf(' ')),
+        streetName:   addressString.substring(address.indexOf(' ') + 1)
     }
-    return levels - 2;
+}
+
+/**
+ * Count total pets
+ * Write a function named totalPets that accepts an array of objects where each object represents a person, and has a 'pets' property for their owned pets. The function should return the sum of every object's numPets property.
+ *
+ * Examples
+ *
+ * >> totalPets([
+ *       {name: 'Fernando Mendoza', pets: 1},
+ *       {name: 'Douglas Hirsh', pets: 8},
+ *       {name: 'Kenneth Howell', pets: 2}
+ *    ]) ➞ 11
+ */]
+let peopleWithPets = [
+    {name: 'Fernando Mendoza', pets: 1},
+    {name: 'Douglas Hirsh', pets: 8},
+    {name: 'Kenneth Howell', pets: 2}
+]
+//
+// function totalPets(arrayOfPets) {
+//     let toal = 0;
+//     for(let i = 0; i < arrayOfPets.length; i++){
+//         total += arrayOfPets[i].pets;
+//     }
+//     return total;
+// }
+
+function totalPets(arrayOfPets){
+    let total = 0;
+    arrayOfPets.forEach(function(object){
+        total += object.pets;
+    });
+    return total;
 }

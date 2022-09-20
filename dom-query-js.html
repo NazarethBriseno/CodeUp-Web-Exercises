@@ -39,21 +39,31 @@
         var mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        let jsCool = function cool (){
+            mainHeader.innerHTML = "JavaScript is Cool";
+            mainHeader.removeEventListener('click', cool);
+        }
+
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header") ;
 
         // TODO: Set the text color of subHeader to blue
-    subHeader.setAttribute("class", "colorBlue");
+        function turnBlue (){
+            subHeader.setAttribute("class", "colorBlue");
+        }
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName('li');
 
         // TODO: Set text color on every other list item to grey
-        for (let i = 0; i < listItems.length; i++) {
-            listItems[i].style.color = 'grey';
+        function turnGrey () {
+            for (let i = 0; i < listItems.length; i++) {
+                listItems[i].style.color = 'grey';
+            }
         }
         // TODO: Set text color of li with dbid = 1 to blue
-        listItems[0].style.color = "blue";
+        function firstBlue(){
+            listItems[0].style.color = "blue";
+        }
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
@@ -65,24 +75,11 @@
         let btn3 = document.getElementById("bt3");
         let btn4 = document.getElementById("bt4");
 
-    function alert1(){
-        alert("Wow, YOU CLICKED ME!");
-    }
-    function alert2(){
-        alert("Second");
-    }
+    btn1.addEventListener('click', jsCool);
+    btn2.addEventListener('click', turnBlue);
+    btn3.addEventListener('click', turnGrey);
+    btn4.addEventListener('click', firstBlue);
 
-    function alert3(){
-        alert("Third is the worst");
-    }
-
-    function alert4(){
-        alert("Never thought i'd get clicked, thanks man.....thanks.")
-    }
-        btn1.addEventListener('click', alert1);
-        btn2.addEventListener('click', alert2);
-        btn3.addEventListener('click', alert3);
-        btn4.addEventListener('click', alert4);
 </script>
 </body>
 </html>
