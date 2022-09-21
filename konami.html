@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+
+</head>
+<body>
+<h1>Konami Code</h1>
+<script src="js/jquery-3.6.1.min.js"></script>
+<script>
+    "use strict";
+
+
+    let cheatCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft',
+        'ArrowRight', 'a', 'b', 'Enter'];
+    let emptyCode = [];
+    $(document).keyup(function(e){
+        emptyCode.push(e.key);
+        console.log(emptyCode)
+        console.log(e.key);
+        if (emptyCode.sort().join(" ") === cheatCode.sort().join(" ")){
+                alert("NICE!");
+    }});
+</script>
+</body>
+</html>
