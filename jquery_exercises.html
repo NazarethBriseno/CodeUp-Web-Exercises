@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome!</h1>
+    <h1 id="header">Welcome!</h1>
     <p>This is jQuery practice</p>
     <ul>
         <li>One</li>
@@ -22,9 +27,24 @@
     // $(".codeup").css({
     //     "border": "1px solid red",
     //     "width": "fit-content"});
-    $("li").css("font-size", "20px");
-    let allElements = $("h1, p, li");
-    alert($("h1").text());
+    // $("li").css("font-size", "20px");
+    // let allElements = $("h1, p, li");
+    // alert($("h1").text());
+    $("#header").on('click', function(){
+        $("#header").css("background-color", "blue");
+    });
+
+    $("p").on('dblclick', function(){
+        $("p").css("font-size", "18px");
+    })
+
+    $("li").hover(
+        function() {
+            $( this ).addClass( "red" );
+        }, function() {
+            $( this ).removeClass( "red" );
+        }
+    );
     </script>
 </body>
 </html>
