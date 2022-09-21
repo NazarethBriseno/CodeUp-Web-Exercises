@@ -19,8 +19,10 @@
         console.log(emptyCode)
         console.log(e.key);
         if (emptyCode.sort().join(" ") === cheatCode.sort().join(" ")){
-                alert("NICE!");
-    }});
+                alert("You have added 30 lives!");
+                $(document.body).css('background', 'red');
+    }
+    });
 </script>
 </body>
 </html>

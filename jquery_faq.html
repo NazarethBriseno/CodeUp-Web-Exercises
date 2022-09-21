@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+<body>
+<h3>National Park Frequently Asked Questions</h3>
+<button>Show Answers</button>
+<dl>
+    <dt>Who is the director of the National Park Service?</dt>
+    <dd class="invisible">Charles F. "Chuck" Sams III is the Director of the National Park Service.
+
+        Learn more about past directors of the National Park Service.</dd>
+    <dt>What government agency oversees the National Park Service?</dt>
+    <dd class="invisible">The National Park Service is a bureau of the Department of the Interior. Directly overseeing its operation
+        is the department's Assistant Secretary for Fish, Wildlife and Parks.
+    </dd>
+    <dt>How many employees are in the National Park Service?</dt>
+    <dd class="invisible">Permanent, temporary, and seasonal employees: Approximately 20,000
+        Volunteers: More than 279,000 in 2019</dd>
+    <dt>How old is the National Park System?</dt>
+    <dd class="invisible">The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.
+        Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872, as the nation's first national park. View the National Park System timeline.</dd>
+    <dt>What is the origin of the National Park Service arrowhead?</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusantium adipisci aliquid amet assumenda
+        at, consectetur doloremque error explicabo molestias numquam optio quibusdam recusandae rerum suscipit ut velit veritatis. Enim.</dd>
+    <dt>How many areas are in the National Park System?</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eius est facilis, fugit modi officiis
+        pariatur reiciendis sequi similique sint, soluta sunt! Animi eaque eos inventore, iusto quidem quisquam vel.</dd>
+    <dt>What is the largest national park site? Smallest?</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum debitis distinctio dolorum eius enim, esse et
+        fuga illo incidunt, iure magni numquam pariatur quae repudiandae veniam. Ab beatae cupiditate dolorem!</dd>
+    <dt>What is the most-visited national park?</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cupiditate eum libero officia possimus
+        reprehenderit soluta vero voluptatum? Aspernatur aut, cupiditate fugit incidunt inventore nesciunt qui velit. Amet, facere, nostrum.</dd>
+    <dt>What is the National Park Service budget?</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum excepturi explicabo fugiat quaerat rem,
+        voluptates! Ad aperiam consectetur distinctio dolor doloremque labore laborum, nam optio placeat quod temporibus tenetur totam!</dd>
+</dl>
+<script src="js/jquery-3.6.1.min.js"></script>
+<script>
+    $("button").on('click', function(){
+        $("dd").toggleClass("invisible").css("color", "red");
+    })
+</script>
+</body>
+</html>
