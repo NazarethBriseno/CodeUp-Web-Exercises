@@ -13,6 +13,10 @@
         .bold {
             font-weight: bold;
         }
+
+        .blue {
+            color: blue;
+        }
     </style>
 </head>
 <body>
@@ -88,7 +92,7 @@
     })
 
     $("li").on('click', function(){
-        $(this).parent().children().first().css("color", "blue");
+        $(this).parent().children().first().toggleClass("blue");
     })
 
 </script>

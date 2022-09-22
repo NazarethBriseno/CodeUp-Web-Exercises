@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<!--<table id="products">-->
+<!--    <thead>-->
+<!--        <tr>-->
+<!--            <th id="title">Title</th>-->
+<!--            <th id="quantity">Quantity</th>-->
+<!--            <th id="price">Price</th>-->
+<!--            <th id ="categories">Categories</th>-->
+<!--        </tr>-->
+
+<!--    </thead>-->
+<!--    <tbody id="insertProducts"></tbody>-->
+<!--</table>-->
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Categories</th>
+    </tr>
+    </thead>
+    <tbody id="table">
+    </tbody>
+</table>
+<button id="refresh">Refresh Items</button>
+
+<script src="js/jquery-3.6.1.min.js"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script>
+(function() {
+    "use strict";
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+    $.ajax("data/inventory.json").done(function(data){
+       data.forEach(function(stuff){
+        $("#table").append(
+            `<tr>
+        <td>${stuff.title}</td>
+        <td>${stuff.quantity}</td>
+        <td>${stuff.price}</td>
+        <td>${stuff.categories}</td>
+    </tr>`
+        );
+        $("#refresh").on('click', function(){
+            $("#table").load(data);
+        })
+       })
+    })
+})();
+</script>
+
+</body>
+</html>

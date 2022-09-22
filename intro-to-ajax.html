@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intro to AJAX</title>
+</head>
+<body>
+<script src="js/jquery-3.6.1.min.js"></script>
+<script>
+    $.ajax("data/murals.json").done(function(data){
+       console.log(data);
+    })
+</script>
+</body>
+</html>
