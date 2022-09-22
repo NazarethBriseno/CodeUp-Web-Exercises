@@ -7,12 +7,18 @@
         .invisible {
             visibility: hidden;
         }
-
+        .yellowBack {
+            background-color: yellow;
+        }
+        .bold {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 <h3>National Park Frequently Asked Questions</h3>
-<button>Show Answers</button>
+<button id="showDD">Show Answers</button>
+<button id="lastItem">Turn Last List Item a color</button>
 <dl>
     <dt>Who is the director of the National Park Service?</dt>
     <dd class="invisible">Charles F. "Chuck" Sams III is the Director of the National Park Service.
@@ -44,11 +50,43 @@
     <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum excepturi explicabo fugiat quaerat rem,
         voluptates! Ad aperiam consectetur distinctio dolor doloremque labore laborum, nam optio placeat quod temporibus tenetur totam!</dd>
 </dl>
+<h3>West City Park</h3>
+<ul class="parks">
+    <li>Allows all animals</li>
+    <li>No entry fee</li>
+    <li>Opened in 1998</li>
+    <li>Lots of Stuff</li>
+</ul>
+<h3>North Star Park</h3>
+<ul class="parks">
+    <li>In the North</li>
+    <li>Green Grass</li>
+    <li>No Pets</li>
+    <li>Golf Park</li>
+</ul>
+<h3>Relax Springs Park</h3>
+<ul class="parks">
+    <li>Best Water Slides</li>
+    <li>Clearest Water</li>
+    <li>Entry fee of $10</li>
+    <li>Open during the week AND Weekends</li>
+</ul>
 <script src="js/jquery-3.6.1.min.js"></script>
 <script>
-    $("button").on('click', function(){
+    $("#showDD").on('click', function(){
         $("dd").toggleClass("invisible").css("color", "red");
+    });
+
+    $("#lastItem").on('click', function(){
+        $("ul").each(function(){
+            $(this).children().last().toggleClass("yellowBack");
+        });
+    });
+
+    $("h3").on('click', function(){
+        $(this).next().children().toggleClass("bold");
     })
+
 </script>
 </body>
 </html>
