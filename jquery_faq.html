@@ -84,7 +84,11 @@
     });
 
     $("h3").on('click', function(){
-        $(this).next().children().toggleClass("bold");
+        $(this).next().children().first().toggleClass("bold");
+    })
+
+    $("li").on('click', function(){
+        $(this).parent().children().first().css("color", "blue");
     })
 
 </script>
