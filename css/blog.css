@@ -1,0 +1,18 @@
+.blogheader {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.hidden {
+    display: none;
+}
+
+#posts {
+    overflow:scroll;
+    height: 90vh;
+}
+
+footer {
+    color: grey;
+    font-style: italic;
+}
