@@ -39,9 +39,15 @@ favoritePlaces.forEach(function(value){
 
 $("#submitMarker").on('click', function(){
     geocode($("#userMarker").val(), MAPBOX_API_TOKEN).then(function(result) {
-        new mapboxgl.Marker()
+        let markerName1 = $("#markerName").val();
+        map.setCenter(result);
+        map.setZoom(12);
+        let newMarker = new mapboxgl.Marker()
             .setLngLat(result)
         .addTo(map);
+        let newPop = new mapboxgl.Popup()
+            .setHTML(`<p class="mt-3" style="width: 250px;">${markerName1}</p>`);
+        newMarker.setPopup(newPop);
     });
 
 
