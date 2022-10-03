@@ -53,10 +53,8 @@ let averageYearsOfUsers = totalYears / users.length;
 console.log(averageYearsOfUsers)
 
 let longestEmail = users.reduce(function(currentAmount, user){
-    if(user.email.length > currentAmount){
+    if(user.email.length > currentAmount.length){
         return currentAmount = user.email.length;
-        return user.email;
     }
-
-}, 0)
+}, "")
 console.log(longestEmail)
