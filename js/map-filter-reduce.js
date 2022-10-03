@@ -36,25 +36,38 @@ const users = [
     }
 ];
 
+//Shows the people who've only learned 3 languages
 let onlyThreeLanguages = users.filter((person) => person.languages.length === 3);
 console.log(onlyThreeLanguages);
 onlyThreeLanguages.forEach((person, index) => {
     document.body.innerHTML += `<p>User: ${index + 1} has only learned ${person.languages}</p>`
 })
 
+//Get all the users email addresses in a new array
 let emailAddresses = users.map((person) => person.email)
 console.log(emailAddresses)
 
 
+//Calculate the average years of all the users
 let totalYears = users.reduce((currentAmount, person) => currentAmount + person.yearsOfExperience, 0)
 console.log(totalYears);
 
 let averageYearsOfUsers = totalYears / users.length;
 console.log(averageYearsOfUsers)
 
+
+//Using .reduce with a string accumulator--------------------------
 let longestEmail = users.reduce(function(currentAmount, user){
     if(user.email.length > currentAmount.length){
-        return currentAmount = user.email.length;
+        currentAmount = user.email;
     }
+    return currentAmount
 }, "")
 console.log(longestEmail)
+
+
+//Log All Users Name in One String using the reduce method
+let allNamesInOne = users.reduce(function(currentNames, user){
+    return currentNames + " " + user.name.toUpperCase();
+}, "")
+console.log(allNamesInOne);
