@@ -226,18 +226,41 @@
 // //When the user clicks the button that has the text "Change heading", the text of the <h1> element changes to read
 // // "I pwn the DOM"
 //
-let bodyHeading = document.getElementsByTagName("h1")[0]
-let buttonHeading = document.getElementById("buttonHeading")
+// let bodyHeading = document.getElementsByTagName("h1")[0]
+// let buttonHeading = document.getElementById("buttonHeading")
 
 // buttonHeading.addEventListener("click", function(){
 //     bodyHeading.innerHTML = "Hello"
 // })
 
-document.getElementsByTagName("button")[0].addEventListener('click', function(e){
-    if (document.getElementsByTagName("h1")[0].innerHTML === "I pwn the DOM") {
-        document.getElementsByTagName("h1")[0].innerHTML = "Hello!"
-    } else {
-        document.getElementsByTagName("h1")[0].innerHTML = "I pwn the DOM"
-    }
-})
+// document.getElementsByTagName("button")[0].addEventListener('click', function(e){
+//     if (document.getElementsByTagName("h1")[0].innerHTML === "I pwn the DOM") {
+//         document.getElementsByTagName("h1")[0].innerHTML = "Hello!"
+//     } else {
+//         document.getElementsByTagName("h1")[0].innerHTML = "I pwn the DOM"
+//     }
+// })
 
+// When the mouse enters the h2 with the text "Lorem Generator",
+// A paragraph contain lorem appears in the div with the id of loremParagraphs
+
+// When the user clicks on the "Hot Pink It" button, all the text in the div with the id of loremParagraphs becomes hotpink if it's black, or black if it's hotpink.
+
+function turnToPink(){
+    $("#loremParagraphs h2").toggleClass("hotpink");
+    $("p").toggleClass("hotpink");
+}
+$("#hotPinkIt").on("click", turnToPink);
+
+function addMoreLorem(){
+    $("#loremParagraphs").append(`<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet corporis, cupiditate distinctio dolore earum eligendi est harum in ipsam laboriosam libero magnam minima, officia possimus quia quisquam rem tempore temporibus.</p>`)}
+
+$("#loremParagraphs h2").on("mouseover", addMoreLorem);
+
+
+
+$("#blinkPink").on('click', function(){
+    setInterval(function(){
+        $("#loremParagraphs").toggleClass("hotpink");
+    }, 3000);
+});
